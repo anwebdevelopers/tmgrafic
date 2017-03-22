@@ -1,0 +1,346 @@
+
+.top-line {
+    display: flex;
+
+}
+
+.top-line__breadcrumbs {
+    flex: 1 1 auto;
+    align-self: center;
+    order: 0;
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    line-height: 1.1;
+    color: $accent-color;
+    a {
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        padding: 0 2.5rem 0 0;
+        color: $accent-color;
+        text-decoration: none;
+        transition: all .5s ease;
+        &:after {
+            content: '';
+            position: absolute;
+            right: .8rem;
+            top: .5rem;
+            width: .8rem;
+            height: .8rem;
+            border-top: 1px solid $accent-color;
+            border-right: 1px solid $accent-color;
+            transform: rotate(45deg);
+        }
+        &:hover, &:active, &:focus {
+            color: $main-color;
+        }
+    }
+    span {
+        display: inline-block;
+        vertical-align: middle;
+        padding: .5rem 0;
+    }
+}
+
+.top-line__basket {
+    flex: 0 0 auto;
+    order: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 25.8rem;
+    min-height: 7.3rem;
+    padding: 1.5rem 3rem 1.5rem 9rem;
+    border-top: 1px solid #fff;
+    background-color: $main-color;
+    transition: all .5s ease;
+    cursor: pointer;
+    &:hover, &:active {
+        background-color: lighten($main-color, 10%);
+    }
+}
+.top-line__basket-icon {
+    position: absolute;
+    top: 50%;
+    left: 3rem;
+    transform: translateY(-50%);
+}
+.top-line__basket-sum,
+.top-line__basket-count {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    color: #fff;
+    b {
+        font-weight: 700;
+    }
+}
+
+.catalog__box {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid $gray;
+    &.owl-carousel {
+        padding: 0 2.7rem 0;
+        .owl-stage {
+            display: flex;
+            .owl-item {
+                display: flex;
+                flex-direction: column;
+                .catalog__item {
+                    flex: 1 1 auto;
+                    width: auto;
+                    border-bottom: none;
+                    &:nth-child(3n+3) {
+                        border-right: 1px solid $gray;
+                    }
+                }
+            }
+        }
+        .owl-nav {
+            .owl-prev,
+            .owl-next {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 3rem;
+                border: 1px solid #fff;
+                background-color: #fff;
+                transition: all .5s ease;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    z-index: 1;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    background-image: url(../img/sprites.png);
+                    background-repeat: no-repeat;
+                    background-position: -1px -237px ;
+                	width: 8px;
+                	height: 15px;
+                }
+                &:hover, &:active {
+                    border: 1px solid $accent-color;
+                }
+            }
+            .owl-prev {
+                left: 0;
+                border-right: 1px solid $gray;
+            }
+            .owl-next {
+                right: 0;
+                border-left: 1px solid $gray;
+                &:before {
+                    transform: translate(-50%, -50%) rotate(180deg);
+                }
+            }
+        }
+    }
+}
+.catalog__item {
+    flex: 0 1 auto;
+    position: relative;
+    z-index: 1;
+    width: 33.33%;
+    padding: 2rem;
+    text-align: center;
+    border-right: 1px solid $gray;
+    border-bottom: 1px solid $gray;
+    overflow: hidden;
+    &:nth-child(3n+3) {
+        border-right: none;
+    }
+}
+
+.catalog__item-img {
+    position: relative;
+    height: 0;
+    padding-bottom: 70%;
+    img {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 100%;
+        max-height: 100%;
+        width: auto !important;
+        transition: all .5s ease;
+    }
+    &:hover, &:active {
+        img {
+            transform: translate(-50%, -50%) scale(1.05);
+        }
+    }
+}
+.catalog__item-title {
+    margin: 1rem 0 0 0;
+    font-size: 1.7rem;
+    font-weight: 600;
+    a {
+        text-decoration: none;
+        color: #000;
+        transition: all .5s ease;
+        &:hover, &:active, &:focus {
+            color: $main-color;
+        }
+    }
+}
+.catalog__item-price {
+    margin: 2.5rem 0 0 0;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: $accent-color;
+    b {
+        margin: 0 .5rem;
+        font-size: 3rem;
+        font-weight: 600;
+        color: #000;
+    }
+}
+.catalog__item-button {
+    margin: 1rem 0 0 0;
+    a {
+        display: block;
+    }
+}
+
+.pagination {
+    padding: 7rem 0;
+    font-size: 0;
+    text-align: center;
+    border-top: 1px solid $gray;
+    a {
+        display: inline-block;
+        vertical-align: top;
+        margin: 2px;
+        width: 4rem;
+        height: 4.5rem;
+        line-height: 4.5rem;
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-decoration: none;
+        color: #91959b;
+        text-align: center;
+        transition: all .5s ease;
+        &:first-child(),
+        &:last-child() {
+            position: relative;
+            width: 4.5rem;
+            height: 4.5rem;
+            font-size: 0;
+            border: 1px solid $gray;
+            &:before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateY(-50%);
+                background-image: url(../img/sprites.png);
+                background-repeat: no-repeat;
+                background-position: -1px -237px ;
+            	width: 8px;
+            	height: 15px;
+            }
+        }
+        &:first-child() {
+            &:before {
+                left: 40%;
+            }
+        }
+        &:last-child() {
+            &:before {
+                transform: translateY(-50%) rotate(180deg);
+            }
+        }
+        &:hover, &:active, &:focus {
+            color: $main-color;
+            &:first-child(),
+            &:last-child() {
+                border-color: $main-color;
+            }
+        }
+        &.active {
+            color: $main-color;
+        }
+        &.disabled {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width : 1400px) {
+    .top-line__basket {
+        width: 25rem;
+    }
+}
+
+@media only screen and (max-width : 1200px) {
+    .top-line__basket {
+        width: 23.5rem;
+    }
+}
+
+@media only screen and (max-width : 992px) {
+    .top-line__basket {
+        width: 28rem;
+        padding: 2rem 3rem 1.5rem 10rem;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+    .slider {
+        &.owl-carousel {
+            .owl-stage {
+                .owl-item {
+                    .catalog__item {
+                        &:nth-child(2n+2) {
+                            border-right: 1px solid $gray;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .catalog__item {
+        &:nth-child(3n+3) {
+            border-right: 1px solid $gray;
+        }
+        &:nth-child(2n+2) {
+            border-right: none;
+        }
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .top-line {
+        display: block;
+    }
+    .top-line__basket {
+        width: auto;
+    }
+    .top-line__breadcrumbs {
+        display: none;
+    }
+}
+
+@media only screen and (max-width : 360px) {
+    .catalog__box {
+        display: block;
+    }
+    .catalog__item {
+        width: auto;
+        border-right: none;
+        &:nth-child(3n+3) {
+            border-right: none;
+        }
+    }
+}

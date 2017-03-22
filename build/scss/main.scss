@@ -1,0 +1,139 @@
+@import "bourbon";
+@import "components/vars.scss";
+@import "components/normalize.scss";
+@import "components/fonts.scss";
+@import "components/icons.scss";
+
+input:focus::-webkit-input-placeholder {color: transparent}
+input:focus::-moz-placeholder          {color: transparent}
+input:focus:-moz-placeholder           {color: transparent}
+input:focus:-ms-input-placeholder      {color: transparent}
+
+*::-webkit-input-placeholder {
+	color: #91959b;
+	opacity: 1;
+}
+*:-moz-placeholder {
+	color: #91959b;
+	opacity: 1;
+}
+*::-moz-placeholder {
+	color: #91959b;
+	opacity: 1;
+}
+
+*:-ms-input-placeholder {
+	color: #91959b;
+	opacity: 1;
+}
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+	color: #91959b;
+}
+body input:required:valid,
+body textarea:required:valid {
+	color: #91959b;
+}
+*,
+*:before,
+*:after{
+	box-sizing: border-box;
+}
+html {
+	font-size: 10px;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 1.8rem;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.25;
+	font-family: 'Open Sans', sans-serif;
+	color: #000;
+	background-color: #efefef;
+}
+// .container {
+// 	max-width: 1388px;
+// 	padding: 0 15px;
+// 	margin: 0 auto;
+// }
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.hidden {
+	display: none;
+}
+a {
+	outline: none !important;
+	color: $main-color;
+
+}
+.button {
+	@include btn;
+	font-size: 1.8rem;
+	padding: 1.4rem 3rem;
+	line-height: 1;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #fff;
+	background-color: $main-color;
+	transition: all .5s ease;
+	&:hover, &:active, &:focus {
+		background-color: lighten($main-color, 10%);
+	}
+}
+.button_bg_gray {
+	background-color: #91959b;
+	&:hover, &:active, &:focus {
+		background-color: darken(#91959b, 10%);
+	}
+}
+.title {
+	padding: 3.5rem 3rem;
+	color: darken($main-color, 10%);
+	line-height: 1.2;
+	text-align: center;
+	h1 {
+		margin: 0;
+		font-size: 4rem;
+		font-weight: 600;
+	}
+	h2 {
+		margin: 0;
+		font-size: 3rem;
+		font-weight: 400;
+	}
+	h3 {
+		margin: 0;
+		font-size: 2.4rem;
+		font-weight: 400;
+	}
+}
+
+//Custom Styles Here
+@import "components/grid.scss";
+@import "components/header.scss";
+@import "components/slider.scss";
+@import "components/contacts.scss";
+@import "components/footer.scss";
+//Page stiles
+@import "components/catalog.scss";
+@import "components/product.scss";
+@import "components/basket-table.scss";
+@import "components/basket-ordering.scss";
+
+//@import "build/scss/components/magnific-popup.scss";
+
+//ALWAYS END
+@import "components/media.scss";
+
+//Load Libs SASS
+// @import "html/libs/animate/animate.sass";
+@import "html/libs/owl.carousel/dist/assets/owl.carousel.min";
+//@import "html/libs/superfish/dist/css/superfish";
+//@import "html/libs/font-awesome/scss/font-awesome.scss";
+//@import "html/libs/jQuery.mmenu/dist/css/jquery.mmenu.all";
+//@import "html/libs/magnific-popup/dist/magnific-popup";

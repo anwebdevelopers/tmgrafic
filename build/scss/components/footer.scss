@@ -1,0 +1,224 @@
+.footer {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 3rem 0;
+    border-top: 1px solid $gray;
+}
+.footer__logo {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    padding: 0 3rem;
+    border-right: 1px solid $gray;
+    img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+.footer__contacts {
+    flex: 1 1 auto;
+    display: flex;
+    border-right: 1px solid $gray;
+}
+.footer__contacts-phone {
+    flex: 0 1 auto;
+    width: 32%;
+    padding: 0 3rem;
+}
+.footer__contacts-adress {
+    flex: 0 1 auto;
+    width: 68%;
+    padding: 0 3rem;
+}
+.footer__contacts-item {
+    position: relative;
+    margin: 2rem 0 0 0;
+    padding: 0 0 0 3.5rem;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    font-weight: 400;
+    &:first-child() {
+        margin-top: 0;
+    }
+    color: #91959b;
+    i[class^="icon-"] {
+        position: absolute;
+        top: 0;
+        left: 1.2rem;
+        transform: translateX(-50%);
+    }
+    a {
+        text-decoration: none;
+        color: #91959b;
+        span {
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                right: 50%;
+                bottom: 0;
+                height: 1px;
+                background-color: #91959b;
+                transition: all .3s ease;
+            }
+        }
+        &:hover, &:active, &:focus {
+            span {
+                &:after {
+                    left: 0;
+                    right: 0;
+                }
+            }
+
+        }
+    }
+}
+.footer__counters {
+    flex: 0 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 185px;
+    margin: 0 3rem;
+}
+.footer__counters-item {
+    flex: 0 0 auto;
+    width: 90px;
+    max-width: 50%;
+    margin: 0 0 5px 0;
+    &:nth-child(even) {
+        margin-left: 5px;
+    }
+    &:nth-last-child(1),
+    &:nth-last-child(2) {
+        margin-bottom: 0;
+    }
+    img {
+        display: block;
+    }
+}
+.footer__button-top {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: -10rem;
+    width: 25%;
+    padding: 0 3rem;
+    font-size: 1.8rem;
+    line-height: 1;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    a {
+        @include btn;
+        color: #91959b;
+        padding: 1rem 3rem;
+        border: 1px solid $gray;
+        transition: all .5s ease;
+        &:before {
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            background-image: url(../img/sprites.png);
+            background-repeat: no-repeat;
+            background-position: -1px -237px ;
+        	width: 8px;
+        	height: 15px;
+            transform: rotate(90deg) translateX(-50%);
+        }
+        &:hover, &:active, &:focus {
+            color: $main-color;
+            border-color: $main-color;
+        }
+    }
+
+    span {
+        margin: 0 0 0 .5rem;
+    }
+}
+
+@media only screen and (max-width : 1400px) {
+    .footer__contacts-phone {
+        width: 34%;
+    }
+    .footer__contacts-adress {
+        width: 66%;
+    }
+}
+
+@media only screen and (max-width : 1200px) {
+    .footer__contacts-phone {
+        width: 38%;
+    }
+    .footer__contacts-adress {
+        width: 62%;
+    }
+}
+
+@media only screen and (max-width : 992px) {
+    .footer__logo {
+        display: none;
+    }
+    .footer__button-top {
+        flex: 0 0 auto;
+        position: static;
+        align-self: center;
+        width: auto;
+        font-size: 0;
+        a {
+            width: 68px;
+            height: 68px;
+            line-height: 58px;
+            text-align: center;
+        }
+        span {
+            margin: 0;
+        }
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    .footer {
+        flex-wrap: wrap;
+    }
+    .footer__contacts {
+        width: 100%;
+        padding: 0 0 4rem 0;
+        margin: 0 0 3rem 0;
+        border-right: none;
+        border-bottom: 1px solid $gray;
+    }
+    .footer__button-top {
+        margin: 0 0 0 auto;
+        padding: 0 3rem 0 0;
+    }
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+    .footer__contacts {
+        display: block;
+    }
+    .footer__contacts-phone,
+    .footer__contacts-adress {
+        width: auto;
+    }
+    .footer__contacts-item {
+        margin-top: 2.5rem;
+        font-size: 2.3rem;
+        &:first-child() {
+            margin-top: 2.5rem;
+        }
+    }
+}
+
+@media only screen and (max-width : 320px) {
+
+}

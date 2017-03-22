@@ -1,0 +1,82 @@
+.icon-advantages1, .icon-advantages2, .icon-advantages3, .icon-arrow-gray, .icon-arrow-white, .icon-basket, .icon-cross, .icon-mail, .icon-mark, .icon-mobilel, .icon-phone, .icon-serch, .icon-phone-black{
+	background: url(sprites.png) no-repeat;
+}
+
+.icon-advantages1{
+	background-position: 0 -292px ;
+	width: 70px;
+	height: 69px;
+}
+
+.icon-advantages2{
+	background-position: -1px -372px ;
+	width: 60px;
+	height: 71px;
+}
+
+.icon-advantages3{
+	background-position: -1px -450px ;
+	width: 64px;
+	height: 70px;
+}
+
+.icon-arrow-gray{
+	background-position: -1px -237px ;
+	width: 8px;
+	height: 15px;
+}
+
+.icon-arrow-white{
+	background-position: -1px -214px ;
+	width: 8px;
+	height: 15px;
+}
+
+.icon-basket{
+	background-position: -1px -150px ;
+	width: 39px;
+	height: 35px;
+}
+
+.icon-cross{
+	background-position: -1px -191px ;
+	width: 18px;
+	height: 16px;
+}
+
+.icon-mail{
+	background-position: -1px -94px ;
+	width: 23px;
+	height: 20px;
+}
+
+.icon-mark{
+	background-position: -1px -118px ;
+	width: 20px;
+	height: 26px;
+}
+
+.icon-mobilel{
+	background-position: -1px -63px ;
+	width: 16px;
+	height: 26px;
+}
+
+.icon-phone{
+	background-position: -1px -31px ;
+	width: 26px;
+	height: 27px;
+}
+
+.icon-serch{
+	background-position: -1px -260px ;
+	width: 25px;
+	height: 26px;
+}
+
+.icon-phone-black{
+	background-position: -1px 0;
+	width: 25px;
+	height: 25px;
+}
+
