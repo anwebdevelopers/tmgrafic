@@ -48,6 +48,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 25.8rem;
     min-height: 7.3rem;
     padding: 1.5rem 3rem 1.5rem 9rem;
@@ -67,9 +68,7 @@
 }
 .top-line__basket-sum,
 .top-line__basket-count {
-    flex: 1 1 auto;
-    display: flex;
-    align-items: center;
+    flex: 0 1 auto;
     font-size: 1.8rem;
     line-height: 1.2;
     color: #fff;

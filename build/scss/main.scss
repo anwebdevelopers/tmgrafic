@@ -4,10 +4,11 @@
 @import "components/fonts.scss";
 @import "components/icons.scss";
 
-input:focus::-webkit-input-placeholder {color: transparent}
-input:focus::-moz-placeholder          {color: transparent}
-input:focus:-moz-placeholder           {color: transparent}
-input:focus:-ms-input-placeholder      {color: transparent}
+*:focus::-webkit-input-placeholder {color: transparent}
+*:focus::-moz-placeholder          {color: transparent}
+*:focus:-moz-placeholder           {color: transparent}
+*:focus:-ms-input-placeholder      {color: transparent}
+
 
 *::-webkit-input-placeholder {
 	color: #91959b;
@@ -124,8 +125,9 @@ a {
 @import "components/product.scss";
 @import "components/basket-table.scss";
 @import "components/basket-ordering.scss";
+@import "components/page.scss";
 
-//@import "build/scss/components/magnific-popup.scss";
+@import "build/scss/components/magnific-popup.scss";
 
 //ALWAYS END
 @import "components/media.scss";
@@ -136,4 +138,4 @@ a {
 //@import "html/libs/superfish/dist/css/superfish";
 //@import "html/libs/font-awesome/scss/font-awesome.scss";
 //@import "html/libs/jQuery.mmenu/dist/css/jquery.mmenu.all";
-//@import "html/libs/magnific-popup/dist/magnific-popup";
+@import "html/libs/magnific-popup/dist/magnific-popup";

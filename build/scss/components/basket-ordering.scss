@@ -39,8 +39,7 @@
             content: '';
             position: absolute;
             left: 0;
-            top: 50%;
-            transform: translateY(-50%);
+            top: 0;
             width: 2rem;
             height: 2rem;
             border-radius: 50%;
@@ -172,7 +171,6 @@
     .basket__ordering {
         padding: 2rem 3rem 8rem 3rem;
     }
-
 }
 
 @media only screen and (max-width : 480px) {

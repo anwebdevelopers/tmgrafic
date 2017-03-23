@@ -170,7 +170,7 @@
 						<div class="basket__table-quantity quantity">
 							<button type="button" class="minus">-</button>
 							<button type="button" class="plus">+</button>
-							<input type="text" value="1 шт." disabled>
+							<input type="text" value="1 шт." readonly>
 						</div>
 						<div class="basket__table-price">
 							<span><b>85</b>руб.</span>
@@ -190,7 +190,7 @@
 						<div class="basket__table-quantity quantity">
 							<button type="button" class="minus">-</button>
 							<button type="button" class="plus">+</button>
-							<input type="text" value="1 шт." disabled>
+							<input type="text" value="1 шт." readonly>
 						</div>
 						<div class="basket__table-price">
 							<span><b>85</b>руб.</span>
@@ -267,19 +267,19 @@
 							<div class="basket__ordering-fields-item">
 								<label class="basket__ordering-fields-input">
 									<span>Имя<b>*</b></span>
-									<input type="text">
+									<input type="text" required>
 								</label>
 								<label class="basket__ordering-fields-input">
 									<span>Фамилия<b>*</b></span>
-									<input type="text">
+									<input type="text" required>
 								</label>
 								<label class="basket__ordering-fields-input">
 									<span>Телефон<b>*</b></span>
-									<input type="text">
+									<input type="text" required>
 								</label>
 								<label class="basket__ordering-fields-input">
 									<span>E-mail<b>*</b></span>
-									<input type="text">
+									<input type="text" required>
 								</label>
 							</div>
 
@@ -306,9 +306,7 @@
 
 
 			</form>
-			<!-- Catalog end -->
-
-		</main>
+			<!-- Catalog end --></main>
 		<!-- Main end -->
 
 		<!-- Footer start -->
@@ -365,10 +363,35 @@
 			</div>
 		</footer>
 		<!-- Footer end -->
-	</form>
+	</div>
+
+	<div class="hidden">
+		<!--  Popup start -->
+		<div id="calculating" class="popup my-mfp-slide-bottom zoom-anim-dialog">
+			<form class="calculating">
+				<div class="title">
+					<h2>Расчет заказа</h2>
+				</div>
+				<div class="calculating__fields">
+					<input type="text" placeholder="Имя*" required>
+					<input type="text" placeholder="Телефон*" required>
+					<input type="text" placeholder="E-mail*" required>
+				</div>
+				<div class="calculating__textarea">
+					<textarea placeholder="Сообщение"></textarea>
+				</div>
+				<div class="calculating__submit">
+					<button type="submit" class="button">отправить запрос</button>
+				</div>
+				<div class="calculating__text">
+					<span>* - поля обязательные для заполнения</span>
+				</div>
+			</form>
+		</div>
+		<!--  Popup end -->
+	</div>
 
 	<!-- Load Scripts Start -->
-	<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 	<script src="js/libs.js"></script>
 	<script src="js/common.js"></script>
 	<!-- Load Scripts End -->

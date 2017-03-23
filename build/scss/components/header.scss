@@ -97,6 +97,10 @@
         font-size: 4rem;
     }
 }
+
+.header__slider_without_blackout {
+
+}
 .header__slider-item {
     min-height: 57rem;
     padding: 10rem 7rem 13rem 7rem;
@@ -209,6 +213,13 @@
             bottom: 0;
             left: 0;
             background-color: transparentize($accent-color, .2);
+        }
+    }
+    .header__slider_without_blackout {
+        .header__slider-item {
+            &:before {
+                display: none;
+            }
         }
     }
     .header__slider-title {

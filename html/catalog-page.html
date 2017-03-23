@@ -341,8 +341,33 @@
 		<!-- Footer end -->
 	</div>
 
+	<div class="hidden">
+		<!--  Popup start -->
+		<div id="calculating" class="popup my-mfp-slide-bottom zoom-anim-dialog">
+			<form class="calculating">
+				<div class="title">
+					<h2>Расчет заказа</h2>
+				</div>
+				<div class="calculating__fields">
+					<input type="text" placeholder="Имя*" required>
+					<input type="text" placeholder="Телефон*" required>
+					<input type="text" placeholder="E-mail*" required>
+				</div>
+				<div class="calculating__textarea">
+					<textarea placeholder="Сообщение"></textarea>
+				</div>
+				<div class="calculating__submit">
+					<button type="submit" class="button">отправить запрос</button>
+				</div>
+				<div class="calculating__text">
+					<span>* - поля обязательные для заполнения</span>
+				</div>
+			</form>
+		</div>
+		<!--  Popup end -->
+	</div>
+
 	<!-- Load Scripts Start -->
-	<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 	<script src="js/libs.js"></script>
 	<script src="js/common.js"></script>
 	<!-- Load Scripts End -->
